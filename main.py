@@ -15,9 +15,6 @@ def get_file_lines(filename):
     # open, read, and splitlines methods are chained and invoked to return a clean array of filename lines.
     return open(filename).read().splitlines()
 
-# This is a test to check if the function performs correctly with the solved example given in the assignment description
-# print(get_file_lines('./poem.txt'))
-
 
 def lines_printed_backwards(lines_list):
     """
@@ -36,8 +33,6 @@ def lines_printed_backwards(lines_list):
         lines_list_len -= 1
 
 
-# lines_printed_backwards(get_file_lines('./poem.txt'))
-
 def lines_printed_random(lines_list):
     """
     This function takes lines_list as a parameter, then prints elements of the list in random.
@@ -55,9 +50,6 @@ def lines_printed_random(lines_list):
         print(lines_list[randint(0, lines_list_len - 1)])
 
 
-# lines_printed_random(get_file_lines('./poem.txt'))
-
-
 def lines_printed_custom(lines_list, loops):
     """
     This function takes lines_list and loops as parameters.
@@ -69,7 +61,7 @@ def lines_printed_custom(lines_list, loops):
     - loops: Integer - the number of cycles you want to perform
 
     Return:
-    -
+    - None
     """
     # This will be used as the range iterator in the upcoming for loop, a simple multiplication helps.
     half_loops = loops * 2
@@ -79,7 +71,7 @@ def lines_printed_custom(lines_list, loops):
     for half_cycle in range(half_loops):
         # so I'm checking if the flag True, if it isnt print each element in the regular order
         if not is_reverse:
-            print('CYCLE: ' + str((half_loops/2)))
+            print('CYCLE: ' + str((half_cycle/2 + 1)))
             print('====================')
             for line in range(len(lines_list)):
                 print(lines_list[line])
@@ -100,6 +92,7 @@ def lines_printed_custom(lines_list, loops):
 # executing the code
 file_lines = get_file_lines('./poem.txt')
 
-lines_printed_backwards()
-lines_printed_random()
+# print(file_lines)
+# lines_printed_backwards(file_lines)
+# lines_printed_random(file_lines)
 lines_printed_custom(file_lines, 3)
