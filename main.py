@@ -37,3 +37,22 @@ def lines_printed_backwards(lines_list):
 
 
 # lines_printed_backwards(get_file_lines('./poem.txt'))
+
+def lines_printed_random(lines_list):
+    """
+    This function takes lines_list as a parameter, then prints elements of the list in random.
+    This is where we make use of randint import we did in the begininning
+
+    Parameters:
+    - lines_list: Array - an array of elements of a printable literal
+
+    Return:
+    - None (this function only has logic to print)
+    """
+    lines_list_len = len(lines_list)
+
+    for list_ind in range(lines_list_len):
+        print(lines_list[randint(0, lines_list_len - 1)])
+
+
+# lines_printed_random(get_file_lines('./poem.txt'))
