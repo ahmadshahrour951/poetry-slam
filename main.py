@@ -95,3 +95,11 @@ def lines_printed_custom(lines_list, loops):
             print('====================')
             # this will change the flag, so that in the next iteration the logic is navigated to the first if statement
             is_reverse = False
+
+
+# executing the code
+file_lines = get_file_lines('./poem.txt')
+
+lines_printed_backwards()
+lines_printed_random()
+lines_printed_custom(file_lines, 3)
