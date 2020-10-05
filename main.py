@@ -17,3 +17,23 @@ def get_file_lines(filename):
 
 # This is a test to check if the function performs correctly with the solved example given in the assignment description
 # print(get_file_lines('./poem.txt'))
+
+
+def lines_printed_backwards(lines_list):
+    """
+    This function takes lines_list as a parameter, then prints each elements of the list in reverse order
+
+    Parameters:
+    - lines_list: Array - an array of elements of a printable literal
+
+    Return:
+    - None (this function only has logic to print)
+    """
+    lines_list_len = len(lines_list)
+
+    while lines_list_len > 0:
+        print(str(lines_list_len) + ' ' + lines_list[lines_list_len - 1])
+        lines_list_len -= 1
+
+
+# lines_printed_backwards(get_file_lines('./poem.txt'))
